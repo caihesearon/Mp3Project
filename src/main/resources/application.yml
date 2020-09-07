@@ -8,10 +8,10 @@ spring:
   servlet:
     load-on-startup: 1
   datasource:
-    url: jdbc:mysql://localhost:3306/mp3_2
+    url: jdbc:mysql://localhost:3306/dasanxia?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     username: root
     password: 123456
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
 server:
   port: 8888
@@ -21,6 +21,9 @@ server:
 logging:
   level:
     com.shangmao.map3.dao: debug
+
 mybatis:
-  mapper-locations: classpath*:src\main\resources\mapper\*.xml
+  mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.shangmao.map3.dao
+  configuration:
+    map-underscore-to-camel-case: true
