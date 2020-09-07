@@ -1,0 +1,26 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/view/
+      suffix: .jsp
+  thymeleaf:
+    cache: false
+  servlet:
+    load-on-startup: 1
+  datasource:
+    url: jdbc:mysql://localhost:3306/mp3_2
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+
+server:
+  port: 8888
+  tomcat:
+    uri-encoding: utf-8
+
+logging:
+  level:
+    com.shangmao.map3.dao: debug
+mybatis:
+  mapper-locations: classpath*:src\main\resources\mapper\*.xml
+  type-aliases-package: com.shangmao.map3.dao
