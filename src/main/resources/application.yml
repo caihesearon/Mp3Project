@@ -27,3 +27,12 @@ mybatis:
   type-aliases-package: com.shangmao.map3.dao
   configuration:
     map-underscore-to-camel-case: true
+
+
+# pagehelper
+pagehelper:
+  helper-dialect: mysql
+  reasonable: "true"
+  support-methods-arguments: "true"
+  params: count=countSql
+
