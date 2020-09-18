@@ -28,6 +28,10 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web-services</artifactId>
         </dependency>
         <dependency>
@@ -74,16 +78,16 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-        <dependency>
-            <!-- jsp页面支持 -->
-            <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-jasper</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            &lt;!&ndash; jsp页面支持 &ndash;&gt;-->
+<!--            <groupId>org.apache.tomcat.embed</groupId>-->
+<!--            <artifactId>tomcat-embed-jasper</artifactId>-->
+<!--            <scope>provided</scope>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>javax.servlet</groupId>-->
+<!--            <artifactId>jstl</artifactId>-->
+<!--        </dependency>-->
         <!-- spring boot集成Swagger2 -->
         <dependency>
             <groupId>io.springfox</groupId>
@@ -171,14 +175,14 @@
         </plugins>
 
         <resources>
-            <resource>
-                <!-- jsp网页配置根目录 -->
-                <directory>src/main/webapp</directory>
-                <targetPath>META-INF/resources</targetPath>
-                <includes>
-                    <include>**/**</include>
-                </includes>
-            </resource>
+<!--            <resource>-->
+<!--                &lt;!&ndash; jsp网页配置根目录 &ndash;&gt;-->
+<!--                <directory>src/main/webapp</directory>-->
+<!--                <targetPath>META-INF/resources</targetPath>-->
+<!--                <includes>-->
+<!--                    <include>**/**</include>-->
+<!--                </includes>-->
+<!--            </resource>-->
 <!--            <resource>-->
 <!--                &lt;!&ndash; 数据持久层配置根目录 &ndash;&gt;-->
 <!--                <directory>src/main/resources</directory>-->

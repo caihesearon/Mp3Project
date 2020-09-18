@@ -4,6 +4,7 @@ import com.shangmao.mp3.service.IUserService;
 import com.shangmao.mp3.util.RequestUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
@@ -17,7 +18,8 @@ public class UserController {
     private IUserService iUserService;
 
     @RequestMapping("/")
-    public String index(){
+    public String index(Model model){
+        model.addAttribute("name", "demaxiya");
         return "login";
     }
 
