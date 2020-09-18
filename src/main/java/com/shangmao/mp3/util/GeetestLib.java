@@ -1,4 +1,4 @@
-package com.shangmao.map3.util;
+package com.shangmao.mp3.util;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -1,6 +1,6 @@
-package com.shangmao.map3.service;
+package com.shangmao.mp3.service;
 
-import com.shangmao.map3.pojo.User;
+import com.shangmao.mp3.pojo.User;
 
 import java.util.List;
 

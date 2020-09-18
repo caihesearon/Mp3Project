@@ -1,8 +1,8 @@
-package com.shangmao.map3.service.impl;
+package com.shangmao.mp3.service.impl;
 
-import com.shangmao.map3.dao.UserMapper;
-import com.shangmao.map3.pojo.User;
-import com.shangmao.map3.service.IUserService;
+import com.shangmao.mp3.dao.UserMapper;
+import com.shangmao.mp3.pojo.User;
+import com.shangmao.mp3.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

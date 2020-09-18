@@ -1,4 +1,4 @@
-package com.shangmao.map3.pojo;
+package com.shangmao.mp3.pojo;
 
 import lombok.Data;
 

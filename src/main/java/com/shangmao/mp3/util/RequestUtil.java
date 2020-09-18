@@ -1,9 +1,8 @@
-package com.shangmao.map3.util;
+package com.shangmao.mp3.util;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;

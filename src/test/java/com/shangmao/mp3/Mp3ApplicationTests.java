@@ -1,4 +1,4 @@
-package com.shangmao.map3;
+package com.shangmao.mp3;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
