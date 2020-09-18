@@ -42,9 +42,10 @@ var handler2 = function (captchaObj) {
                     geetest_seccode: result.geetest_seccode
                 },
                 success: function (data) {
-                    if (data.status === 'success') {
-                        alert("成功");
+                    if (data.LoginStatus>0&&data.status == 'success') {
+                        //alert("成功");
                         //$("#form1").submit();
+                        location.href = "index"
                     } else if (data.status === 'fail') {
                         alert('失败');
                     }
