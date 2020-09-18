@@ -18,9 +18,14 @@ public class UserController {
     private IUserService iUserService;
 
     @RequestMapping("/")
-    public String index(Model model){
+    public String login(Model model){
         model.addAttribute("name", "demaxiya");
         return "login";
+    }
+
+    @RequestMapping("/index")
+    public String index(){
+        return "index";
     }
 
     @RequestMapping("/login")
