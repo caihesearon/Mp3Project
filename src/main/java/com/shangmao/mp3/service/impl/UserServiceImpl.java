@@ -11,11 +11,12 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements IUserService {
 
-    @Autowired(required = false)
+    @Autowired
     private UserMapper userMapper;
 
     @Override
-    public List<User> getAllUser() {
-        return userMapper.getAllUser();
+    public boolean getAllUser(User user) {
+        List<User> allUser = userMapper.getAllUser(user);
+        return !allUser.isEmpty();
     }
 }

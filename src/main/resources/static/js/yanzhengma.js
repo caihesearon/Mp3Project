@@ -20,45 +20,50 @@ $.ajax({
 
 
 var handler2 = function (captchaObj) {
-    //$("#submit2").click(function () {
+
     captchaObj.onSuccess(function () {
         var result = captchaObj.getValidate();
         if (!result) {
             $("#notice2").show();
             setTimeout(function () {
                 $("#notice2").hide();
-            }, 2000);
+            }, 200);
 
         } else {
+            var userName = $('#adminName').val()
+            var pwd = $('#adminPassword').val()
+            if(userName == '' || pwd == ''){
+                alert("请将用户名和密码填写完整");
+                location.reload();
+                return
+            }
             $.ajax({
                 url: 'login',
                 type: 'POST',
                 dataType: 'json',
                 data: {
-                    username: $('#userName').val(),
-                    password: $('#passWord').val(),
+                    adminName: userName,
+                    adminPassword: pwd,
                     geetest_challenge: result.geetest_challenge,
                     geetest_validate: result.geetest_validate,
                     geetest_seccode: result.geetest_seccode
                 },
                 success: function (data) {
-                    if (data.LoginStatus>0&&data.status == 'success') {
-                        //alert("成功");
-                        //$("#form1").submit();
+                    console.log(data)
+                    if (data.status == 200) {
                         location.href = "index"
-                    } else if (data.status === 'fail') {
-                        alert('失败');
+                    } else {
+                        alert('用户名或密码失败');
+                        location.reload();
                     }
                 }
             })
         }
         e.preventDefault();
     });
-    // ����֤��ӵ�idΪcaptcha��Ԫ���ͬʱ��������input��ֵ���ڱ��ύ
     captchaObj.appendTo("#captcha2");
     captchaObj.onReady(function () {
         $("#wait2").hide();
     });
-    // ����ӿڲο���http://www.geetest.com/install/sections/idx-client-sdk.html
 };
  

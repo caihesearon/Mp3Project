@@ -5,6 +5,14 @@
 
     <select id="getAllUser" resultType="com.shangmao.mp3.pojo.User">
         select * from tb_admin
+        <where>
+            <if test="adminName != '' || adminName != null">
+                admin_name = #{adminName}
+            </if>
+            <if test="adminPassword != '' || adminPassword != null">
+                and admin_password = #{adminPassword}
+            </if>
+        </where>
     </select>
 
 </mapper>

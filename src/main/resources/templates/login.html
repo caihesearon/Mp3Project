@@ -54,11 +54,9 @@
         <img src="images/avtar.png" />
     </div>
     <form action="login" method="post" id="">
-        <input type="text" class="text" value="Username" name="userName" id="userName"
-               onfocus="this.value = '';"
-               onblur="if (this.value == '') {this.value = 'Username';}">
+        <input type="text" class="text" value="" placeholder="userName" name="adminName" id="adminName">
         <div class="key">
-            <input type="password" value="Password" name="passWord" id="passWord"
+            <input type="password" value="" placeholder="passWord" name="adminPassword" id="adminPassword"
                    onfocus="this.value = '';"
                    onblur="if (this.value == '') {this.value = 'Password';}">
         </div>
@@ -93,11 +91,12 @@
 <script type="text/javascript" src="/js/yanzhengma.js"></script>
 <script th:inline="javascript">
 
-
-        // var name = [[${name}]]
-        // console.log(name)
-        // alert(name)
-
+    // $(function () {
+    //     $("#captcha2").click(function () {
+    //         alert("Test");
+    //         return ;
+    //     })
+    // })
 
 </script>
 </html>

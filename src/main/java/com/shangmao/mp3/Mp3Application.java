@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.shangmao.map3.dao")
+@MapperScan("com.shangmao.mp3.dao")
 public class Mp3Application {
 
     public static void main(String[] args) {
